@@ -5,7 +5,7 @@ function App() {
   return (
     <><h1>Welcome to Secret Arcade</h1>
     <Link to={'/loginpage'}> Login </Link>
-    <Link to={'/registerpage'}></Link>
+    <Link to={'/registerpage'}>Register</Link>
     </>
 
   )
