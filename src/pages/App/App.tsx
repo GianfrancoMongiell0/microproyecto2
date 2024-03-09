@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
-import LoginPage from "../LoginPage/LoginPage"
 
 function App() {
   return (
-    <><h1>Welcome to Secret Arcade</h1>
-    <Link to={'/loginpage'}> Login </Link>
-    <Link to={'/registerpage'}>Register</Link>
+
+    <>
+      <h1>Welcome to Secret Arcade</h1>
+      <Link to={'/loginpage'}> <button>Log In</button> </Link>
+      <Link to={'/registerpage'}><button>Sing up</button></Link>
     </>
 
   )
