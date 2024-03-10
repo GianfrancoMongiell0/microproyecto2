@@ -9,11 +9,16 @@ import x from '../../assets/x.webp'
 
 export default function RegisterPage() {
 
+    function handleSubmit(e: any) {
+        e.preventDefault();
+        console.log(name, lastName, email, password, game);
+    }
+
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [game, setGame] = useState("valor1") // [1,2,3
+    const [game, setGame] = useState("") // [1,2,3
 
     const auth = useAuth();
     if (auth.isAutheticade) {
@@ -21,7 +26,7 @@ export default function RegisterPage() {
         )
     }
 
-    
+
 
     return (
         <DefaultLayout>
@@ -44,30 +49,30 @@ export default function RegisterPage() {
 
                     <label htmlFor="juegofavorito">Juego Favorito</label>
                     <select className="input" value={game} onChange={(e) => setGame(e.target.value)}>
-                        <option value="0">The Withcer3: Wild Hunt</option>
-                        <option value="1">Read Dead Redemption 2</option>
-                        <option value="2">The Legend od Zelda: Breath of the Wild</option>
-                        <option value="3">Dark Souls III</option>
-                        <option value="4">Super Mario Odyssey</option>
-                        <option value="5">Overwatch</option>
-                        <option value="6">Minecraft</option>
-                        <option value="7">Fornite</option>
-                        <option value="8">Fifa 22</option>
-                        <option value="9">Call of Dty: Warzone</option>
-                        <option value="10">Assassin's Creed Valhalla</option>
-                        <option value="11">Cyberpunk 2077</option>
-                        <option value="12">Amoung Us</option>
-                        <option value="13">Animal Crossing: New Horizon's</option>
-                        <option value="14">League of Legends</option>
-                        <option value="15">Genshin Impact</option>
-                        <option value="16">Apex Legends</option>
-                        <option value="17">World of Warcraft</option>
-                        <option value="18">Genshin Impact</option>
-                        <option value="19">Control</option>
-                        <option value="20">Hades</option>
+                        <option value="The Withcer3: Wild Hunt">The Withcer3: Wild Hunt</option>
+                        <option value="Read Dead Redemption 2">Read Dead Redemption 2</option>
+                        <option value="The Legend od Zelda: Breath of the Wild">The Legend od Zelda: Breath of the Wild</option>
+                        <option value="Dark Souls III">Dark Souls III</option>
+                        <option value="Super Mario Odyssey">Super Mario Odyssey</option>
+                        <option value="Overwatch">Overwatch</option>
+                        <option value="Minecraft">Minecraft</option>
+                        <option value="Fornite">Fornite</option>
+                        <option value="Fifa 22">Fifa 22</option>
+                        <option value="Call of Dty: Warzone">Call of Dty: Warzone</option>
+                        <option value="Assassin's Creed Valhalla">Assassin's Creed Valhalla</option>
+                        <option value="Cyberpunk 2077">Cyberpunk 2077</option>
+                        <option value="Amoung Us12">Amoung Us</option>
+                        <option value="Animal Crossing: New Horizon's">Animal Crossing: New Horizon's</option>
+                        <option value="League of Legends">League of Legends</option>
+                        <option value="Genshin Impact">Genshin Impact</option>
+                        <option value="Apex Legends">Apex Legends</option>
+                        <option value="World of Warcraft">World of Warcraft</option>
+                        <option value="Genshin Impact">Genshin Impact</option>
+                        <option value="Control">Control</option>
+                        <option value="Hades">Hades</option>
                     </select>
 
-                    <Link to={'/loginpage'}><button type="submit">Regristrarme</button></Link>
+                    <Link to={'/loginpage'}><button type="submit" onClick={handleSubmit}>Regristrarme</button></Link>
                 </form>
 
 

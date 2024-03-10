@@ -6,6 +6,7 @@ import RegisterPage from '../pages/RegisterPage/RegisterPage';
 import ProtectedRoute from './ProtectedRoute';
 import ClubPage from '../pages/ClubPage/ClubPage';
 import GamesPage from '../pages/GamesPage/GamesPage';
+import AdminPages from '../pages/AdminPages/AdminPages';
 
 export const router = createBrowserRouter([
     {
@@ -26,6 +27,9 @@ export const router = createBrowserRouter([
                 path: '/gamespage',
                 element: <GamesPage />
             
+            },{
+                path: '/adminpage',
+                element: <AdminPages />
             }
         ]
     },
