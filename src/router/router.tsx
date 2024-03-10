@@ -4,6 +4,8 @@ import HomePage from '../pages/HomePage/HomePage';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import RegisterPage from '../pages/RegisterPage/RegisterPage';
 import ProtectedRoute from './ProtectedRoute';
+import ClubPage from '../pages/ClubPage/ClubPage';
+import GamesPage from '../pages/GamesPage/GamesPage';
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +18,14 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/homepage',
-                element: <HomePage />
+                element: <HomePage />,
+            },{
+                path: '/clubpage',
+                element: <ClubPage />
+            },{
+                path: '/gamespage',
+                element: <GamesPage />
+            
             }
         ]
     },

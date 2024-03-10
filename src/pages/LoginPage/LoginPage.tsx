@@ -37,11 +37,11 @@ export default function LoginPage() {
                     <p>O inicia sesion con:</p>
                     <div className="botones">
 
-                        <button >
+                        <button className="Google">
                             <img src={LogoGoogle} alt="" className="Logo" />Google
                         </button>
 
-                        <button >
+                        <button className="Twitter">
                             <img src={x} alt="" className="Logo" />Twitter
                         </button>
 

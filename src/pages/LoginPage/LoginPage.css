@@ -32,3 +32,32 @@ p {
     flex-direction: row;
     margin: 20px;
 }
+
+.Twitter {
+    background-color: #000000;
+}
+
+.Google {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+    border: 1px solid #000000;
+}
+
+.Registerpage {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.input {
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+}
