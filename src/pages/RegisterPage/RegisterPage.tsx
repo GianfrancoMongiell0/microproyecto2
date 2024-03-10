@@ -5,11 +5,13 @@ import { useAuth } from "../../auth/AuthProvider";
 import '../LoginPage/LoginPage.css';
 import LogoGoogle from '../../assets/LogoGoogle.png';
 import x from '../../assets/x.webp'
+import { CreateUsers } from "../../controllers/Users";
 
 
 export default function RegisterPage() {
 
-    function handleSubmit(e: any) {
+    async function handleSubmit(e: any) {
+        await CreateUsers({ name, lastName, email, password, game});
         e.preventDefault();
         console.log(name, lastName, email, password, game);
     }
@@ -25,7 +27,6 @@ export default function RegisterPage() {
         return (<Navigate to={'/homepage'} />
         )
     }
-
 
 
     return (
