@@ -2,6 +2,10 @@ import { Link, Navigate } from "react-router-dom"
 import DefaultLayout from "../../Layaout/DefaultLatout"
 import { useState } from "react";
 import { useAuth } from "../../auth/AuthProvider";
+import './LoginPage.css'
+import LogoGoogle from '../../assets/LogoGoogle.png';
+
+import x from '../../assets/x.webp'
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -9,7 +13,7 @@ export default function LoginPage() {
 
     const auth = useAuth();
     if (auth.isAutheticade) {
-        return ( <Navigate to={'/homepage'} />
+        return (<Navigate to={'/homepage'} />
         )
     }
 
@@ -31,11 +35,20 @@ export default function LoginPage() {
 
                 <div className="form">
                     <p>O inicia sesion con:</p>
-                    <button>Google</button>
-                    <button>Twitter</button>
+                    <div className="botones">
+
+                        <button >
+                            <img src={LogoGoogle} alt="" className="Logo" />Google
+                        </button>
+
+                        <button >
+                            <img src={x} alt="" className="Logo" />Twitter
+                        </button>
+
+                    </div>
                 </div>
             </div>
-        </DefaultLayout>
+        </DefaultLayout >
     )
 
 }

@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import DefaultLayout from "../../Layaout/DefaultLatout";
 import { useAuth } from "../../auth/AuthProvider";
+import '../LoginPage/LoginPage.css';
+import LogoGoogle from '../../assets/LogoGoogle.png';
+import x from '../../assets/x.webp'
+
 
 export default function RegisterPage() {
 
@@ -11,11 +15,9 @@ export default function RegisterPage() {
 
     const auth = useAuth();
     if (auth.isAutheticade) {
-        return ( <Navigate to={'/homepage'} />
+        return (<Navigate to={'/homepage'} />
         )
     }
-
-
 
     return (
         <DefaultLayout>
@@ -30,16 +32,25 @@ export default function RegisterPage() {
                     <input type="email" id="correoelectronico" name="correoelectronico" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
                     <label htmlFor="contresena">Contresena</label>
-                    <input type="password" id="contresena" name="contresena" value={password} onChange={(e) =>setPassword(e.target.value)} required />
+                    <input type="password" id="contresena" name="contresena" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
                     <Link to={'/loginpage'}><button type="submit">Regristrarme</button></Link>
                 </form>
 
 
                 <div className="form">
-                    <p>O registrate con:</p>
-                    <button>Google</button>
-                    <button>Twitter</button>
+                    <p>O inicia sesion con:</p>
+                    <div className="botones">
+
+                        <button >
+                            <img src={LogoGoogle} alt="" className="Logo" />Google
+                        </button>
+
+                        <button >
+                            <img src={x} alt="" className="Logo" />Twitter
+                        </button>
+
+                    </div>
                 </div>
             </div>
         </DefaultLayout>
