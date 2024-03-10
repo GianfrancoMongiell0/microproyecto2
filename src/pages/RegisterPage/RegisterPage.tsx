@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import DefaultLayout from "../../Layaout/DefaultLatout";
 import { useAuth } from "../../auth/AuthProvider";
+import { collection, addDoc } from "firebase/firestore";
 
 
 export default function RegisterPage() {
@@ -11,6 +12,7 @@ export default function RegisterPage() {
     const [password, setPassword] = useState("");
 
     const auth = useAuth();
+    
     if (auth.isAutheticade) {
         return ( <Navigate to={'/homepage'} />
         )
@@ -47,3 +49,4 @@ export default function RegisterPage() {
     )
 
 }
+

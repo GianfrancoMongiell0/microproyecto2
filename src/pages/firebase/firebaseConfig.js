@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
+import { name, email, password} from "../RegisterPage/RegisterPage";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,3 +25,11 @@ export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+
+    // Add a new document with a generated id.
+    const docRef = await addDoc(collection(db, "users"), {
+      nombre: name,
+      correo: email,
+      contrasena:password 
+    });
+    console.log("Document written with ID: ", docRef.id);
