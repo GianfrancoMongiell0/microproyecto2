@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import DefaultLayout from "../../Layaout/DefaultLatout";
 import { useAuth } from "../../auth/AuthProvider";
 
+
 export default function RegisterPage() {
 
     const [name, setName] = useState("");
