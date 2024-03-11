@@ -1,14 +1,9 @@
 import HomeLayout from "../../Layaout/HomeLayout";
+import React from 'react';
 
+export default function Dashboard(){
 
+    return( <h1>Dashboard</h1>)
 
-  export default function Dashboard(){
-    return (
-        <HomeLayout>
-            <div>
-                <h2> Bienvenido a tu panel de control</h2>
+}
 
-            </div>
-        </HomeLayout>
-    )
-  }

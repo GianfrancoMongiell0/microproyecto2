@@ -1,6 +1,6 @@
 import { Link, Navigate } from "react-router-dom"
 import DefaultLayout from "../../Layaout/DefaultLatout"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "../../auth/AuthProvider";
 import './LoginPage.css'
 import LogoGoogle from '../../assets/LogoGoogle.png';
@@ -8,7 +8,8 @@ import x from '../../assets/x.webp'
 import { loginUser } from "../../controllers/Autentication";
 import { db } from "../.././firebase"
 import { collection, query, where, getDocs } from "firebase/firestore";
-
+import { gapi } from "gapi-script";
+import GoogleLogin from 'react-google-login';
 
 export default function LoginPage() {
 
@@ -22,6 +23,26 @@ export default function LoginPage() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const clientID = "318527723954-o9kccp1a0g3575a7o95sbptpnsng4e04.apps.googleusercontent.com"
+
+    const onSuccess = (response) => {
+        setEmail(response.profileObj);
+        document.getElementsByClassName("Google").hidden = true;
+      }
+      const onFailure = (response) => {
+        console.log("Something went wrong");
+      }
+      const handleLogout  = () => {
+        setEmail({}); 
+      }
+      useEffect(() => {
+        function start() {
+          gapi.client.init({
+            clientId: clientID,
+          });
+        }
+        gapi.load("client:auth2", start);
+      });
 
     const auth = useAuth();
 
@@ -56,6 +77,14 @@ export default function LoginPage() {
 
                         <button className="Google">
                             <img src={LogoGoogle} alt="" className="Logo" />Google
+                            <GoogleLogin
+         
+                                clientId={clientID}
+                                onSuccess={onSuccess}
+                                onFailure={onFailure}
+                                buttonText="Continue  with Google"
+                                cookiePolicy={"single_host_origin"}
+                            />
                         </button>
 
                         <button className="Twitter">

@@ -1,10 +1,16 @@
 import HomeLayout from "../../Layaout/HomeLayout";
 
-export default function HomePage() {
-   return (
-      <HomeLayout>
-         <h2>Bienvenido</h2>
-      </HomeLayout>
-   )
 
-}
+
+  export default function Dashboard(){
+    return (
+        <HomeLayout>
+            <div>
+                <h2> Bienvenido a tu Perfil</h2>
+
+            </div>
+        </HomeLayout>
+    )
+  }
+
+  

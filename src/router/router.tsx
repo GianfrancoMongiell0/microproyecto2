@@ -7,7 +7,6 @@ import ProtectedRoute from './ProtectedRoute';
 import ClubPage from '../pages/ClubPage/ClubPage';
 import GamesPage from '../pages/GamesPage/GamesPage';
 import AdminPages from '../pages/AdminPages/AdminPages';
-import Dashboard from '../pages/Dashboard/Dashboard';
 
 export const router = createBrowserRouter([
     {
@@ -31,9 +30,6 @@ export const router = createBrowserRouter([
             },{
                 path: '/adminpage',
                 element: <AdminPages />
-            },{
-                path: '/dashboard',
-                element: <Dashboard />
             }
         ]
     },
