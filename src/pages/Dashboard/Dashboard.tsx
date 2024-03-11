@@ -1,4 +1,14 @@
-export default function Dashboard(){
+import HomeLayout from "../../Layaout/HomeLayout";
 
-    return( <h1>Dashboard</h1>)
-}
+
+
+  export default function Dashboard(){
+    return (
+        <HomeLayout>
+            <div>
+                <h2> Bienvenido a tu panel de control</h2>
+
+            </div>
+        </HomeLayout>
+    )
+  }

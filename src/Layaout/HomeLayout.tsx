@@ -16,7 +16,8 @@ export default function HomeLayout({ children }: HomeLayoutProps) {
                         <SearchBar />
                         <li className="Navbar"><Link to={'/homepage'}>Logo</Link></li>
                         <li className="Navbar"><Link to={'/clubpage'}>Clubes</Link></li>
-                        <li className="Navbar"><Link to={'/gamespage'}>videogames</Link></li>
+                        <li className="Navbar"><Link to={'/gamespage'}>Videogames</Link></li>
+                        <li className="Navbar"><Link to={'/dashboard'}>Perfil</Link></li>
                     </ul>
 
                     SearchBar
