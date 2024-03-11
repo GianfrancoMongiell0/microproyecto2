@@ -1,11 +1,19 @@
 import HomeLayout from "../../Layaout/HomeLayout";
+import CardClub from "../../components/CardClub";
 
-export default function ClubPage() {
+
+
+export default function GamesPage() {
+
+
     return (
         <HomeLayout>
             <div>
-                <h1>ClubPage</h1>
+                <h2>Lista de Clubes</h2>
+                <CardClub nombre={""} descripcion={""} >
+                </CardClub>
             </div>
+
         </HomeLayout>
     )
 }

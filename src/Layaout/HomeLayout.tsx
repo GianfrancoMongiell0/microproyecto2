@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import './HomeLayout.css'
+import SearchBar from "../components/SearchBar";
+
 
 interface HomeLayoutProps {
     children: React.ReactNode;
@@ -10,10 +13,13 @@ export default function HomeLayout({ children }: HomeLayoutProps) {
             <header>
                 <nav>
                     <ul>
-                        <li><Link to={'/homepage'}>Logo</Link></li>
-                        <li><Link to={'/clubpage'}>Clubes</Link></li>
-                        <li><Link to={'/gamespage'}>videogames</Link></li>
+                        <SearchBar />
+                        <li className="Navbar"><Link to={'/homepage'}>Logo</Link></li>
+                        <li className="Navbar"><Link to={'/clubpage'}>Clubes</Link></li>
+                        <li className="Navbar"><Link to={'/gamespage'}>videogames</Link></li>
                     </ul>
+
+                    SearchBar
                 </nav>
             </header>
 
