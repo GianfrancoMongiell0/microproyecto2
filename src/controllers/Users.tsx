@@ -12,9 +12,9 @@ interface User {
 export async function CreateUsers({ name, lastName, email, password, game  }: User) {
 
 
-    const collectionUser = collection(db, "users"); // Fix: Create a reference to the "games" collection
-    const data = { name, lastName, email, password, game  };   // Fix: Create a JSON object with the data to be added
-    await addDoc(collectionUser, data); // Fix: Add a new document with a generated id.
+    const collectionUser = collection(db, "users"); 
+    const data = { name, lastName, email, password, game  };   
+    await addDoc(collectionUser, data); 
 }
 
 export async function getUsers(){

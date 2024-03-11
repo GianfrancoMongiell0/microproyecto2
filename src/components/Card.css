@@ -1,0 +1,10 @@
+li {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 20px;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    
+}
