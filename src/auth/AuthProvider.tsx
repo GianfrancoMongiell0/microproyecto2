@@ -7,7 +7,7 @@ const AuthContext = createContext({ isAutheticade: false, })
 
 export function AuthProvider({ children }: AuthProviderProps) {
 
-    const [isAutheticade, setIsAutheticade] = useState(true);
+    const [isAutheticade] = useState(true);
 
     return (
         <AuthContext.Provider value={{ isAutheticade }}>

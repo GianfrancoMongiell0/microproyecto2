@@ -1,7 +1,7 @@
 import { User, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { auth } from "../firebase"; // Import Usercontext from the appropriate file
-import { UserContext } from "../controllers/Users";
+
 import React from "react";
 
 export default function UseProvider({ children }: { children: React.ReactNode }) {

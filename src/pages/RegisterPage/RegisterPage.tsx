@@ -3,8 +3,6 @@ import { Link, Navigate } from "react-router-dom";
 import DefaultLayout from "../../Layaout/DefaultLatout";
 import { useAuth } from "../../auth/AuthProvider";
 import '../LoginPage/LoginPage.css';
-import LogoGoogle from '../../assets/LogoGoogle.png';
-import x from '../../assets/x.webp'
 import { CreateUsers } from "../../controllers/Users";
 
 
@@ -82,11 +80,11 @@ export default function RegisterPage() {
                     <div className="botones">
 
                         <button >
-                            <img src={LogoGoogle} alt="" className="Logo" />Google
+                            <img src={'LogoGoogle'} alt="" className="Logo" />Google
                         </button>
 
                         <button >
-                            <img src={x} alt="" className="Logo" />Twitter
+                            <img src={'x'} alt="" className="Logo" />Twitter
                         </button>
 
                     </div>
