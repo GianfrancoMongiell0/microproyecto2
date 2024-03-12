@@ -28,7 +28,10 @@ export const router = createBrowserRouter([
                 element: <GamesPage />
             
             },{
-                path: '/adminpage',
+                path: '/creategames',
+                element: <AdminPages />
+            },{
+                path: '/createclub',
                 element: <AdminPages />
             }
         ]

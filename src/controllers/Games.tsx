@@ -4,16 +4,16 @@ import { collection, addDoc, getDoc, getDocs } from "firebase/firestore";
 
 interface Game {
 
-    titulo: string;
-    genero: string;
+    nombre: string;
+    
     descripcion: string;
 }
 
-export async function CreateGames({ titulo, genero, descripcion }: Game) {
+export async function CreateGames({ nombre, descripcion }: Game) {
 
 
     const collectionGame = collection(db, "games"); // Fix: Create a reference to the "games" collection
-    const data = { titulo, genero, descripcion };   // Fix: Create a JSON object with the data to be added
+    const data = { nombre, descripcion };   // Fix: Create a JSON object with the data to be added
     await addDoc(collectionGame, data); // Fix: Add a new document with a generated id.
 }
 

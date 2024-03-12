@@ -15,6 +15,7 @@ export default function AdminPages() {
 
     return (
         <div>
+            <h2>Crea tu juego</h2>
             <label htmlFor="">
                 Titulo: {' '}
                 <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} required />

@@ -1,0 +1,33 @@
+import { useState } from "react";
+import { CreateGames } from "../../controllers/Games";
+import React from "react";
+
+export default function AdminClubPages() {
+
+    const [nombre, setnombre] = useState("");
+    const [descripcion, setDescripcion] = useState("");
+
+    async function handleSubmit(e: any) {
+        await CreateGames({ nombre, descripcion });
+        alert("Club creado con exito");
+        console.log(nombre, descripcion);
+    }
+
+    return (
+        <>
+            <h2>Crea tu juego</h2>
+            <label htmlFor="">
+                Nombre: {' '}
+                <input type="text" value={nombre} onChange={(e) => setnombre(e.target.value)} required />
+            </label>
+
+            <label htmlFor="">
+                Decripcion: {' '}
+                <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required />
+            </label>
+
+            <button onClick={handleSubmit}>Enviar
+            </button>
+        </>
+    )
+}
