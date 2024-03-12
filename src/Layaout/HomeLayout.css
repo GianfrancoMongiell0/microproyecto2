@@ -1,0 +1,34 @@
+header {
+    background-color: #2783D4;
+    text-align: center;
+    font-size: 35px;
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2783D4;
+    padding: 10px;
+}
+
+.Navbar {
+    display: inline-block;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 30px;
+    color: #000000;
+    font-family: 'Arial';
+    font-weight: bold;
+}

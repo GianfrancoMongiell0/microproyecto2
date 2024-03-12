@@ -1,0 +1,63 @@
+.Logo {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin: auto 20px;
+    border-radius: 50px;
+}
+
+button {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(39, 131, 212);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+button:hover {
+    filter: drop-shadow(0 0 1em #000000);
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.Twitter {
+    background-color: #000000;
+}
+
+.Google {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+    border: 1px solid #000000;
+}
+
+.Registerpage {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.input {
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+}

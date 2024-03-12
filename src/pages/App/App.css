@@ -1,0 +1,26 @@
+/*body{
+    background-image: url('../../assets/Wallpaper.jpg');
+    background-size: 95%;
+}*/
+.boton {
+    size: 10rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.svg:hover {
+    filter: drop-shadow(0 0 4em #000000);
+    
+
+}
+h1{color: #000000;}
