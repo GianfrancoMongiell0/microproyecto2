@@ -22,7 +22,7 @@ export default function CardGames({titulo, descripcion, genero }: { titulo: stri
         <li key={game.titulo}>
             <h2>{game.titulo}</h2>
             <p> {game.descripcion}</p>
-            <p> {game.genero}</p>
+            <p> <b>Genero: </b>{game.genero}</p>
           
         </li>))
 
