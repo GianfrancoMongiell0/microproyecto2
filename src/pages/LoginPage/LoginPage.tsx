@@ -9,12 +9,11 @@ import { loginUser } from "../../controllers/Autentication";
 import { db } from "../.././firebase"
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { gapi } from "gapi-script";
-import GoogleLogin from 'react-google-login';
 
 export default function LoginPage() {
 
     async function handleSubmit(e: any) {
-        await op();
+        await loginUser({ email, password });
         e.preventDefault();
         console.log();
         
@@ -25,36 +24,11 @@ export default function LoginPage() {
     const [password, setPassword] = useState("");
     const clientID = "318527723954-o9kccp1a0g3575a7o95sbptpnsng4e04.apps.googleusercontent.com"
 
-    const onSuccess = (response) => {
-        setEmail(response.profileObj);
-        document.getElementsByClassName("Google").hidden = true;
-      }
-      const onFailure = (response) => {
-        console.log("Something went wrong");
-      }
-      const handleLogout  = () => {
-        setEmail({}); 
-      }
-      useEffect(() => {
-        function start() {
-          gapi.client.init({
-            clientId: clientID,
-          });
-        }
-        gapi.load("client:auth2", start);
-      });
+   
 
-    const auth = useAuth();
+   
 
-    async function op(){
-        const result = await loginUser({ email, password});
-        if (result.success == true){
-                return (<Navigate to={'/homepage'} />)
-        }else{
-                return (<Navigate to={'/loginpage'} />)
-        }
-    }
-    
+ 
 
     return (
         <DefaultLayout>
@@ -77,14 +51,7 @@ export default function LoginPage() {
 
                         <button className="Google">
                             <img src={LogoGoogle} alt="" className="Logo" />Google
-                            <GoogleLogin
-         
-                                clientId={clientID}
-                                onSuccess={onSuccess}
-                                onFailure={onFailure}
-                                buttonText="Continue  with Google"
-                                cookiePolicy={"single_host_origin"}
-                            />
+                            
                         </button>
 
                         <button className="Twitter">
