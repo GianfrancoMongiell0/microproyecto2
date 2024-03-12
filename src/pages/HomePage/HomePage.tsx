@@ -1,5 +1,7 @@
 import HomeLayout from "../../Layaout/HomeLayout";
 import './HomePage.css';
+import { Link, Navigate } from "react-router-dom";
+import {name, lastName, email, password, game} from "../RegisterPage/RegisterPage";
 
 
 
@@ -16,7 +18,7 @@ export default function Dashboard() {
         <div className="separar">
           <button >Editar Perfil</button>
         </div><div className="separar">
-          <button >Cerrar Sesion</button>
+          <Link to={'/'}><button type="submit" >Cerrar Sesion</button></Link>
         </div>
       </div>
     </HomeLayout>

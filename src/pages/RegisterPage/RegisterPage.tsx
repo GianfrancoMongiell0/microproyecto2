@@ -8,7 +8,6 @@ import x from '../../assets/x.webp'
 import { CreateUsers } from "../../controllers/Users";
 
 
-
 export default function RegisterPage() {
 
     async function handleSubmit(e: any) {
