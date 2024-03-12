@@ -30,9 +30,6 @@ export const router = createBrowserRouter([
             },{
                 path: '/creategames',
                 element: <AdminPages />
-            },{
-                path: '/createclub',
-                element: <AdminPages />
             }
         ]
     },

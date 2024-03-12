@@ -26,12 +26,4 @@ export async function getClub() {
     console.log(clubs);
     return clubs;
 }
-/*  
-    const collectionGame = collection(db, "games");
-    const querySnapshot = getDocs(collectionGame);
-
-    (await querySnapshot).forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });*/
-
 

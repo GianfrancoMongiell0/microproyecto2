@@ -26,12 +26,5 @@ export async function getGames() {
     console.log(games);
     return games;
 }
-/*  
-    const collectionGame = collection(db, "games");
-    const querySnapshot = getDocs(collectionGame);
-
-    (await querySnapshot).forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });*/
 
 
