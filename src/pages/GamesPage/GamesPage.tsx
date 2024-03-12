@@ -13,7 +13,7 @@ export default function GamesPage() {
                 <h2>Lista de Juegos</h2>
                 <h3>Desea agregar otro juego a la lista?</h3>
                 <Link to={'/creategames'}><button>Crea otro juego</button></Link>
-                <CardGames titulo={""} descripcion={""} genero={""} />
+                <CardGames />
             </div>
 
         </HomeLayout>
