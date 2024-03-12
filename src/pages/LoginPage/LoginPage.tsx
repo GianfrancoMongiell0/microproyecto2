@@ -1,14 +1,8 @@
-import { Link, Navigate } from "react-router-dom"
+import { Link} from "react-router-dom"
 import DefaultLayout from "../../Layaout/DefaultLatout"
-import { useState, useEffect } from "react";
-import { useAuth } from "../../auth/AuthProvider";
+import { useState } from "react";
 import './LoginPage.css'
-import LogoGoogle from '../../assets/LogoGoogle.png';
-import x from '../../assets/x.webp'
 import { loginUser } from "../../controllers/Autentication";
-import { db } from "../.././firebase"
-import { collection, query, where, getDocs } from "firebase/firestore";
-import { gapi } from "gapi-script";
 
 export default function LoginPage() {
 
@@ -18,18 +12,8 @@ export default function LoginPage() {
         console.log();
         
     }
-
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const clientID = "318527723954-o9kccp1a0g3575a7o95sbptpnsng4e04.apps.googleusercontent.com"
-
-   
-
-   
-
- 
-
     return (
         <DefaultLayout>
             <div className="Registerpage">
@@ -50,12 +34,12 @@ export default function LoginPage() {
                     <div className="botones">
 
                         <button className="Google">
-                            <img src={LogoGoogle} alt="" className="Logo" />Google
+                            <img src={''} alt="" className="Logo" />Google
                             
                         </button>
 
                         <button className="Twitter">
-                            <img src={x} alt="" className="Logo" />Twitter
+                            <img src={''} alt="" className="Logo" />Twitter
                         </button>
 
                     </div>

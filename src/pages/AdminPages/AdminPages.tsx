@@ -7,8 +7,16 @@ export default function AdminPages() {
     const [genero, setGenero] = useState("");
     const [descripcion, setDescripcion] = useState("");
 
-    async function handleSubmit(e: any) {
-        await CreateGames({ titulo, genero, descripcion });
+    interface Game {
+        titulo: string;
+        genero: string;
+        descripcion: string;
+        nombre: string; // Add the missing property 'nombre'
+    }
+
+    async function handleSubmit() {
+        const game: Game = { titulo, genero, descripcion, nombre: "" }; // Provide a value for the 'nombre' property
+        await CreateGames(game);
         alert("Juego creado con exito");
         console.log(titulo, genero, descripcion);
     }

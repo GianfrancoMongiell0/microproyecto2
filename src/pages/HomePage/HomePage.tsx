@@ -1,7 +1,6 @@
 import HomeLayout from "../../Layaout/HomeLayout";
 import './HomePage.css';
-import { Link, Navigate } from "react-router-dom";
-import {name, lastName, email, password, game} from "../RegisterPage/RegisterPage";
+import { Link } from "react-router-dom";
 
 
 

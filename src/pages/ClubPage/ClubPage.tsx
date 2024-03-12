@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import HomeLayout from "../../Layaout/HomeLayout";
 import CardClub from "../../components/CardClub";
 
@@ -11,8 +10,8 @@ export default function GamesPage() {
         <HomeLayout>
             <div>
                 <h2>Lista de Clubes</h2>
-                <CardClub nombre={""} descripcion={""} >
-                </CardClub>
+                <CardClub nombre={""} descripcion={""} />
+
             </div>
 
         </HomeLayout>

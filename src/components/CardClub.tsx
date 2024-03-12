@@ -1,10 +1,10 @@
 import './Card.css';
 import { getClub } from "../controllers/Clubs";
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-export default function CardGames({nombre, descripcion}: { nombre: string, descripcion: string }) {
+export default function CardGames() {
 
     const [clubs, setClubs] = useState<any[]>([]);
 
@@ -17,12 +17,12 @@ export default function CardGames({nombre, descripcion}: { nombre: string, descr
         fetchClub();
     }, []);
 
-   
+
     const cardClub = clubs.map((club) => (
         <li key={club.nombre}>
             <h2>{club.nombre}</h2>
             <p> {club.descripcion}</p>
-          
+
         </li>))
 
 
