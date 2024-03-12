@@ -10,7 +10,7 @@ export default function GamesPage() {
         <HomeLayout>
             <div>
                 <h2>Lista de Clubes</h2>
-                <CardClub nombre={""} descripcion={""} />
+                <CardClub />
 
             </div>
 
